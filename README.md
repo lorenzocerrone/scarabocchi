@@ -34,7 +34,7 @@ annotator.mask
  # Example for segment "1"
 annotation = annotator.labels["1"]
 
-# Scrabbles 
+# Scribbles
 annotation.xdata, annotation.ydata
 
 # Object segmentation
