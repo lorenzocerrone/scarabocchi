@@ -159,8 +159,6 @@ class Annotator:
             if self.label_state not in self.labels:
                 self.labels[self.label_state] = Annotation(int(state))
 
-            self._draw_segmentation(recompute=False)
-
     def _draw_segmentation(self, recompute=True):
         # create segmentation rgb image in axes
         if recompute:
