@@ -154,7 +154,7 @@ class Annotator:
 
     def _new_annotation(self, state):
         # Create a new annotation object
-        if int(state) > 1:
+        if int(state) > 0:
             self.label_state = state
             if self.label_state not in self.labels:
                 self.labels[self.label_state] = Annotation(int(state))
