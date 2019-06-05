@@ -1,5 +1,7 @@
 # scarabocchi
-Barebone tools for interactive image scribbles on python
+Barebone tools for interactive image scribbles on python \
+\
+![Alt Text](figures/astronaut_example.gif)
 
 # Requirements
 - numpy
