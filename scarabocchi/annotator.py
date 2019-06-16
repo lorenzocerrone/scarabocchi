@@ -158,11 +158,16 @@ class Annotator:
             self.label_state = state
             if self.label_state not in self.labels:
                 self.labels[self.label_state] = Annotation(int(state))
+            self._draw_segmentation(recompute=False)
 
     def _draw_segmentation(self, recompute=True):
         # create segmentation rgb image in axes
         if recompute:
             self.seg = self.update_segmentation()
+
+        # check if segmentation exist
+        if not hasattr(self, "seg"):
+            return None
 
         rgb_seg = np.zeros((self.seg.shape[0], self.seg.shape[1], 3))
         for idx in sorted(self.labels.keys()):
